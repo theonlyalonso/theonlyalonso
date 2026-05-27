@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* LOGO */
+
+.logo {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+
+    margin-bottom: 30px;
+}
+
+/* TITLE */
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+
+    margin-bottom: 40px;
+
+    color: #ffffff;
+}
+
+/* BUTTON CONTAINER */
+
+.buttons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    align-items: center;
+}
+
+/* BUTTONS */
+
+.lang-button {
+    width: 100%;
+    max-width: 260px;
+
+    background-color: #e62798;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    padding: 16px 24px;
+
+    border-radius: 18px;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-weight: bold;
+
+    transition: 
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* HOVER EFFECTS */
+
+.lang-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* MOBILE OPTIMIZATION */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 30px 20px;
+    }
+
+    .logo {
+        max-width: 280px;
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .lang-button {
+        max-width: 100%;
+        padding: 15px 20px;
+    }
+}
+
+/* SMALL PHONES */
+
+@media (max-width: 480px) {
+
+    .logo {
+        max-width: 230px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .buttons {
+        gap: 16px;
+    }
+
+    .lang-button {
+        border-radius: 16px;
+    }
+}
